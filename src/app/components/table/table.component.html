@@ -1,0 +1,9 @@
+<div class="container">
+	<section class="table">
+		<card *ngFor="let card of deck$ | async; trackBy trackById" [uuid]="card.uuid"></card>
+		<section class="controls">
+			<span class="numberOfTries">{{numberOfTries$ | async}}</span>
+			<button (click)="restart()">restart</button>
+		</section>
+	</section>
+</div>

@@ -1,0 +1,13 @@
+<div
+  class="card"
+  *ngIf="card$ | async as card"
+  [@flip]="card.revealed"
+  [ngClass]="{ clickable: !card.found, found: card.found }"
+  (click)="reveal(card)"
+>
+  <img
+    [src]="'assets/img/card' + card.id + '.svg'"
+    alt="card"
+    [hidden]="!(revealedChange$ | async) && !card.found"
+  />
+</div>

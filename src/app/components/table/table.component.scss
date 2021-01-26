@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-image: url('../../../assets/img/bg.svg');
+    background-color: #303030;
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.table {
+    position: relative;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+
+    .controls {
+        display: flex;
+        grid-column: 1 / 6;
+        button {
+            border: 0;
+            border-radius: 10px;
+            font-size: 2em;
+            margin: auto 0 auto auto;
+            background-color: #FBC02D;
+            outline: none;
+            cursor: pointer;
+        }
+    
+        .numberOfTries {
+            color: #fff;
+            font-size: 3em;
+            padding: 0 6px;
+        }
+    }
+
+}

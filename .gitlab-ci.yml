@@ -1,0 +1,18 @@
+image: node:latest
+
+pages:
+  cache:
+    paths:
+    - node_modules/
+
+  stage: deploy
+  script:
+  - npm install -g @angular/cli
+  - npm install
+  - ng build --prod --base-href /pairs/
+  - mv dist/memory-game/* public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - develop
